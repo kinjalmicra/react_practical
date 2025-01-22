@@ -1,14 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Gallery from "./Components/Gallery";
 
 function App() {
-  return (
-    <>
-    <h1>
-      Hello siri
-    </h1>
-    </>
-  );
+  return(
+    <Gallery />
+  )
 }
 
 export default App;
