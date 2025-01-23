@@ -21,13 +21,15 @@ function App() {
   //   setName("Siya");
   // };
 
-  const [data, setData] = useState(null);
-  const [print, setPrint] = useState(false);
-  const getData = (e) => {
-    console.log(e.target.value);
-    setData(e.target.value);
-    setPrint(false);
-  };
+  // const [data, setData] = useState(null);
+  // const [print, setPrint] = useState(false);
+  // const getData = (e) => {
+  //   console.log(e.target.value);
+  //   setData(e.target.value);
+  //   setPrint(false);
+  // };
+
+  const [status, setStatus] = useState(true);
 
   return (
     <Fragment>
@@ -48,7 +50,6 @@ function App() {
         <h1>{data}</h1>
         <button onClick={handleData}>Click me</button>
       </div> */}
-
       {/* props in functional Components */}
       {/* <h1>Props in react</h1>
       <Student name={name} />
@@ -57,9 +58,22 @@ function App() {
       </button> */}
 
       {/* Get Input box value */}
-      {print ? <h1>{data}</h1> : null}
+      {/* {print ? <h1>{data}</h1> : null}
       <input type="text" onChange={getData} />
-      <button onClick={() => setPrint(true)}>Print</button>
+      <button onClick={() => setPrint(true)}>Print</button> */}
+
+      {/* Hide , Show and Toggle */}
+      {/* {staus ? <h1>Hello Siri</h1> : null}
+      <button onClick={() =>setStaus(false)}>Hide</button>
+      <button onClick={() =>setStaus(true)}>Show</button> */}
+
+      <div>
+        {status ? <h1>Hello Siri</h1> : null}
+
+        <button onClick={() => setStatus(!status)}>
+          {status ? "Hide" : "Show"}
+        </button>
+      </div>
     </Fragment>
   );
 }
