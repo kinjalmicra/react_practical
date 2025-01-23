@@ -29,8 +29,14 @@ function App() {
   //   setPrint(false);
   // };
 
-  const [status, setStatus] = useState(true);
-
+  // const [status, setStatus] = useState(true);
+  const [name, setName] = useState("");
+  const [tnc, setTnc] = useState(false);
+  const [interest, setInterest] = useState("");
+  function getFormData(e) {
+    console.warn(name, interest, tnc);
+    e.preventDefault();
+  }
   return (
     <Fragment>
       {/* <Home /> */}
@@ -50,29 +56,56 @@ function App() {
         <h1>{data}</h1>
         <button onClick={handleData}>Click me</button>
       </div> */}
+
       {/* props in functional Components */}
       {/* <h1>Props in react</h1>
       <Student name={name} />
       <button onClick={handaleName}>
         Update Name
       </button> */}
-
       {/* Get Input box value */}
       {/* {print ? <h1>{data}</h1> : null}
       <input type="text" onChange={getData} />
+      
       <button onClick={() => setPrint(true)}>Print</button> */}
 
       {/* Hide , Show and Toggle */}
       {/* {staus ? <h1>Hello Siri</h1> : null}
       <button onClick={() =>setStaus(false)}>Hide</button>
       <button onClick={() =>setStaus(true)}>Show</button> */}
-
-      <div>
+      {/* <div>
         {status ? <h1>Hello Siri</h1> : null}
 
         <button onClick={() => setStatus(!status)}>
           {status ? "Hide" : "Show"}
         </button>
+      </div> */}
+
+      {/* Handle Form | checkbox | input field | select */}
+      <div className="App">
+        <h1>Handle Form in React</h1>
+        <form onSubmit={getFormData}>
+          <input
+            type="text"
+            placeholder="enter name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />{" "}
+          <br />
+          <br />
+          <select onChange={(e) => setInterest(e.target.value)}>
+            <option>Select Options</option>
+            <option>Marvel</option>
+            <option>DC</option>
+          </select>{" "}
+          <br />
+          <br />
+          <input type="checkbox" onChange={(e) => setTnc(e.target.checked)} />
+          <span>Accept Terms and conditions</span>
+          <br />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </Fragment>
   );
