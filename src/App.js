@@ -126,6 +126,8 @@ function App() {
 
       {/* Conditional rendering | If Condition */}
       {/* <Profile /> */}
+
+      {/* Basic Form validation  */}
       <Login />
     </Fragment>
   );
