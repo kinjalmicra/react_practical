@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Student from "./Components/Student";
 import Profile from "./Components/Profile";
 import Login from "./Components/Login";
+import User from "./Components/User";
 
 function App() {
   // const handleClick = () => {
@@ -32,20 +33,24 @@ function App() {
   // };
 
   // const [status, setStatus] = useState(true);
-  const [name, setName] = useState("");
-  const [tnc, setTnc] = useState(false);
-  const [interest, setInterest] = useState("");
-  function getFormData(e) {
-    console.log(name, interest, tnc);
-    e.preventDefault();
-    handleClear();
-  }
+  // const [name, setName] = useState("");
+  // const [tnc, setTnc] = useState(false);
+  // const [interest, setInterest] = useState("");
+  // function getFormData(e) {
+  //   console.log(name, interest, tnc);
+  //   e.preventDefault();
+  //   handleClear();
+  // }
 
-  const handleClear = () => {
-    setName("");
-    setTnc(false);
-    setInterest("");
-  };
+  // const handleClear = () => {
+  //   setName("");
+  //   setTnc(false);
+  //   setInterest("");
+  // };
+
+  const getdata = () =>{
+    alert("helloo sirii")
+  }
   return (
     <Fragment>
       {/* <Home /> */}
@@ -128,7 +133,10 @@ function App() {
       {/* <Profile /> */}
 
       {/* Basic Form validation  */}
-      <Login />
+      {/* <Login /> */}
+
+      {/* Pass Function as Props */}
+      <User data={getdata}/>
     </Fragment>
   );
 }
