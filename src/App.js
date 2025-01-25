@@ -1,12 +1,23 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Gallery from "./Components/Gallery";
 import Home from "./Pages/Home";
 import Student from "./Components/Student";
 import Profile from "./Components/Profile";
 import Login from "./Components/Login";
 import User from "./Components/User";
+import DataMap from "./Components/DataMap";
 
 function App() {
+  // const [name, setName] = React.useState("siri");
+
+  // useEffect
+  // const [count, setCount] = useState(0);
+  // const [data, setData] = useState(100);
+
+  // useEffect(() => {
+  //   console.log("use effect call");
+  // });
+
   // const handleClick = () => {
   //   alert("hellooooo sirii");
   // };
@@ -48,9 +59,9 @@ function App() {
   //   setInterest("");
   // };
 
-  const getdata = () =>{
-    alert("helloo sirii")
-  }
+  // const getdata = () => {
+  //   alert("helloo sirii");
+  // };
   return (
     <Fragment>
       {/* <Home /> */}
@@ -136,7 +147,23 @@ function App() {
       {/* <Login /> */}
 
       {/* Pass Function as Props */}
-      <User data={getdata}/>
+      {/* <User data={getdata}/> */}
+
+      {/* Render life cycle method */}
+      {/* <User /> */}
+
+      {/* componentDidMount life cycle method */}
+      {/* <User /> */}
+
+      {/* componentDidUpdate life cycle method */}
+      {/* <User /> */}
+
+      {/* <User count={count} data={data}/>
+      <button onClick={() => setCount(count + 1)}>Count</button>
+      <button onClick={() => setData(data + 1)}>Data</button> */}
+
+      <DataMap />
+      
     </Fragment>
   );
 }
