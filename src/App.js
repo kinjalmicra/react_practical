@@ -95,6 +95,24 @@ function App() {
   //   inputRef.current.style.color = 'red'
   // };
 
+  // Controlled Component
+
+  // const [val, setVal] = useState("")
+
+  // UnControlled Component
+
+  // let inputRef=useRef(null)
+  // let inputRef2=useRef(null)
+
+  // const submitForm = (e) => {
+  //   e.preventDefault();
+  //   console.log("input filed 1 value :", inputRef.current.value);
+  //   console.log("input filed 2 value :", inputRef2.current.value);
+  //   let input3 = document.getElementById("input3").value
+  //   console.log("input filed 3 value :", input3);
+    
+  // };
+
   return (
     <Fragment>
       {/* useMemo Hook */}
@@ -112,9 +130,25 @@ function App() {
       <button onClick={handleInput}>Handle Input</button> */}
 
       {/* forwardRef example */}
-      <h1>forwardRef example</h1>
+      {/* <h1>forwardRef example</h1>
       <User ref={inputRef} />
-      <button onClick={updatenput}>handle Input</button>
+      <button onClick={updatenput}>handle Input</button> */}
+
+      {/* Controlled Component */}
+      {/* <h1>Controlled Component</h1>
+      <input src="text" value={val} onChange={(e) => setVal(e.target.value)} />
+      <input />
+      <h3>value : {val}</h3> */}
+
+      {/*  UnControlled Component */}
+      {/* <h1>UnControlled Component</h1>
+      <form onSubmit={submitForm}>
+        <input ref={inputRef} type="text" /> <br /> <br />
+        <input ref={inputRef2} type="text" /> <br /> <br />
+        <input id="input3" type="text" /> <br /> <br />
+
+        <button>submit</button>
+      </form> */}
 
       {/* <Home /> */}
       {/* Click event and function */}
