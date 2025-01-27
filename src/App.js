@@ -6,6 +6,7 @@ import Profile from "./Components/Profile";
 import Login from "./Components/Login";
 import User from "./Components/User";
 import DataMap from "./Components/DataMap";
+import NestList from "./Components/NestList";
 
 function App() {
   // const [name, setName] = React.useState("siri");
@@ -71,7 +72,6 @@ function App() {
         {/* <button onClick={handleClick()}>Click me</button> */}
         {/* <button onClick={handleClick}>Click me</button> */}
       </div>
-
       {/* state in functional Components */}
       {/* <div>
         <h1>{data}</h1>
@@ -81,7 +81,6 @@ function App() {
         <h1>{data}</h1>
         <button onClick={handleData}>Click me</button>
       </div> */}
-
       {/* props in functional Components */}
       {/* <h1>Props in react</h1>
       <Student name={name} />
@@ -93,7 +92,6 @@ function App() {
       <input type="text" onChange={getData} />
       
       <button onClick={() => setPrint(true)}>Print</button> */}
-
       {/* Hide , Show and Toggle */}
       {/* {staus ? <h1>Hello Siri</h1> : null}
       <button onClick={() =>setStaus(false)}>Hide</button>
@@ -105,7 +103,6 @@ function App() {
           {status ? "Hide" : "Show"}
         </button>
       </div> */}
-
       {/* Handle Form | checkbox | input field | select */}
       {/* <div>
         <h1>Handle Form in React</h1>
@@ -139,31 +136,23 @@ function App() {
           <button type="submit">Submit</button>
         </form>
       </div> */}
-
       {/* Conditional rendering | If Condition */}
       {/* <Profile /> */}
-
       {/* Basic Form validation  */}
       {/* <Login /> */}
-
       {/* Pass Function as Props */}
       {/* <User data={getdata}/> */}
-
       {/* Render life cycle method */}
       {/* <User /> */}
-
       {/* componentDidMount life cycle method */}
       {/* <User /> */}
-
       {/* componentDidUpdate life cycle method */}
-      {/* <User /> */}
-y
+      {/* <User /> */}y
       {/* <User count={count} data={data}/>
       <button onClick={() => setCount(count + 1)}>Count</button>
       <button onClick={() => setData(data + 1)}>Data</button> */}
-
-      <DataMap />
-      
+      {/* <DataMap /> */}
+      <NestList />
     </Fragment>
   );
 }
