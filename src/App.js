@@ -79,13 +79,21 @@ function App() {
 
   // useRef Hook
 
-  let inputRef = useRef(null);
-  const handleInput = () => {
-    // console.log("function call");
-    // inputRef.current.value='1000'
-    // inputRef.current.focus();
-    // inputRef.current.style.display='none'
-  };
+  // let inputRef = useRef(null);
+  // const handleInput = () => {
+  //   // console.log("function call");
+  //   // inputRef.current.value='1000'
+  //   // inputRef.current.focus();
+  //   // inputRef.current.style.display='none'
+  // };
+
+  // forwardRef example
+  // let inputRef = useRef(null);
+
+  // const updatenput = () => {
+  //   inputRef.current.value = "1000";
+  //   inputRef.current.style.color = 'red'
+  // };
 
   return (
     <Fragment>
@@ -99,10 +107,14 @@ function App() {
       <button onClick={() => setItem(item * 10)}>Update Item</button> */}
 
       {/* useRef Hook */}
-
-      <h1>useRef Hook in React</h1>
+      {/* <h1>useRef Hook in React</h1>
       <input type="text" ref={inputRef} />
-      <button onClick={handleInput}>Handle Input</button>
+      <button onClick={handleInput}>Handle Input</button> */}
+
+      {/* forwardRef example */}
+      <h1>forwardRef example</h1>
+      <User ref={inputRef} />
+      <button onClick={updatenput}>handle Input</button>
 
       {/* <Home /> */}
       {/* Click event and function */}

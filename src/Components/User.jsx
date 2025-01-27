@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect,forwardRef} from "react";
 
-function User(props) {
-  useEffect(() => {
-    console.log("useEffect");
-  },[props.data, props.count]);
+function User(props,ref) {
+  // useEffect(() => {
+  //   console.log("useEffect");
+  // },[props.data, props.count]);
 
   return (
     // <div>
@@ -11,9 +11,14 @@ function User(props) {
     //   <button onClick={props.data}>Call data function</button>
     // </div>
 
+    // <div>
+    //   <h1>Count Props : {props.count}</h1>
+    //   <h1>Data Props : {props.data}</h1>
+    // </div>
+
+    // forwardRef example
     <div>
-      <h1>Count Props : {props.count}</h1>
-      <h1>Data Props : {props.data}</h1>
+      <input type="text" ref={ref}/>
     </div>
   );
 }
@@ -90,4 +95,4 @@ function User(props) {
 //   }
 // }
 
-export default User;
+export default forwardRef(User);
