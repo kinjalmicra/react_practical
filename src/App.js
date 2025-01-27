@@ -157,7 +157,7 @@ function App() {
 
       {/* componentDidUpdate life cycle method */}
       {/* <User /> */}
-
+y
       {/* <User count={count} data={data}/>
       <button onClick={() => setCount(count + 1)}>Count</button>
       <button onClick={() => setData(data + 1)}>Data</button> */}
