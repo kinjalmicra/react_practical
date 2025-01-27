@@ -7,6 +7,7 @@ import Login from "./Components/Login";
 import User from "./Components/User";
 import DataMap from "./Components/DataMap";
 import NestList from "./Components/NestList";
+import Hoc from "./Components/Hoc";
 
 function App() {
   // const [name, setName] = React.useState("siri");
@@ -110,7 +111,7 @@ function App() {
   //   console.log("input filed 2 value :", inputRef2.current.value);
   //   let input3 = document.getElementById("input3").value
   //   console.log("input filed 3 value :", input3);
-    
+
   // };
 
   return (
@@ -223,21 +224,31 @@ function App() {
       </div> */}
       {/* Conditional rendering | If Condition */}
       {/* <Profile /> */}
+
       {/* Basic Form validation  */}
       {/* <Login /> */}
+
       {/* Pass Function as Props */}
       {/* <User data={getdata}/> */}
+
       {/* Render life cycle method */}
       {/* <User /> */}
+
       {/* componentDidMount life cycle method */}
       {/* <User /> */}
+
       {/* componentDidUpdate life cycle method */}
       {/* <User /> */}
+
       {/* <User count={count} data={data}/>
       <button onClick={() => setCount(count + 1)}>Count</button>
       <button onClick={() => setData(data + 1)}>Data</button> */}
       {/* <DataMap /> */}
+
       {/* <NestList /> */}
+
+      {/* Hoc */}
+      <Hoc />
     </Fragment>
   );
 }
