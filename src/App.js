@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useMemo, useState } from "react";
+import React, { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import Gallery from "./Components/Gallery";
 import Home from "./Pages/Home";
 import Student from "./Components/Student";
@@ -64,28 +64,45 @@ function App() {
   //   alert("helloo sirii");
   // };
 
-  {
-    /* useMemo Hook */
-  }
+  /* useMemo Hook */
 
-  const [count, setCount] = useState(0);
-  const [item, setItem] = useState(10);
+  // const [count, setCount] = useState(0);
+  // const [item, setItem] = useState(10);
 
-  const multiCountMemo = useMemo(function multiCount() {
-    console.log("multiCount");
-    return count * 5;
-  },[count]);
+  // const multiCountMemo = useMemo(
+  //   function multiCount() {
+  //     console.log("multiCount");
+  //     return count * 5;
+  //   },
+  //   [count]
+  // );
+
+  // useRef Hook
+
+  let inputRef = useRef(null);
+  const handleInput = () => {
+    // console.log("function call");
+    // inputRef.current.value='1000'
+    // inputRef.current.focus();
+    // inputRef.current.style.display='none'
+  };
 
   return (
     <Fragment>
       {/* useMemo Hook */}
-
+      {/* 
       <h1>useMemo Hook in React</h1>
       <h2>Count : {count}</h2>
       <h2>Item : {item}</h2>
       <h2>{multiCountMemo}</h2>
       <button onClick={() => setCount(count + 1)}>Update Count</button>
-      <button onClick={() => setItem(item * 10)}>Update Item</button>
+      <button onClick={() => setItem(item * 10)}>Update Item</button> */}
+
+      {/* useRef Hook */}
+
+      <h1>useRef Hook in React</h1>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleInput}>Handle Input</button>
 
       {/* <Home /> */}
       {/* Click event and function */}
